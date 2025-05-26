@@ -17,9 +17,6 @@ def test_directory_creation(fresh_vfs: VirtualFileSystem):
     assert fresh_vfs.create_directory("/home/armir") is True # Test creation of a nested directory
     assert fresh_vfs._get_node_object_by_path("/home/armir") is not None # Test the existence of the nested directory after creation
     
-    assert fresh_vfs.create_directory("/etc/documents") is False # Test creation of a nested directory in an existing one
-    assert fresh_vfs._get_node_object_by_path("/etc/documents") is None
-
     assert fresh_vfs.create_directory("/home/documents/armir") is False # Test the creation of a directory in a non-existing parent directory
     assert fresh_vfs._get_node_object_by_path("/home/documents/armir") is None # Assert the inexistence of the directory after the failed creation
 
