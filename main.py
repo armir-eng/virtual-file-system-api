@@ -52,6 +52,9 @@ async def retrieve_file_system_data():
 
 @router.post("/directory/create")
 async def create_directory(request_body: BaseRequestBody):
+    """
+        This endpoint performs the directory creation in the file system.
+    """
     vfs.create_directory(request_body.path)
 
     # Update the file system status and write it to the JSON file storage
@@ -64,6 +67,9 @@ async def create_directory(request_body: BaseRequestBody):
 
 @router.post("/delete")
 async def delete_node(request_body: BaseRequestBody):
+    """
+        This endpoint performs the item deletionin the file system.
+    """
     vfs.delete(request_body.path)
 
     update_json_storage(vfs)
@@ -75,6 +81,9 @@ async def delete_node(request_body: BaseRequestBody):
 
 @router.post("/rename")
 async def rename_node(request_body: RenameRequestBody):
+    """
+        This endpoint performs the item renaming in the file system.
+    """
     _, old_name = vfs._get_parent_directory_and_name(request_body.old_path)
     vfs.rename(request_body.old_path, request_body.new_name)
 
@@ -88,6 +97,9 @@ async def rename_node(request_body: RenameRequestBody):
 @router.post("/file/write")
 async def create_file(request_body: FileOperationRequestBody):
     
+    """
+        This endpoint performs the file creation in the file system.
+    """
     # Create the file if it does not exist
     vfs.create_file(request_body.path, request_body.content)
 
