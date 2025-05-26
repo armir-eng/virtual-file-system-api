@@ -1,0 +1,25 @@
+{
+  "/": {
+    "created": "2025-05-26T01:57:45.349315",
+    "accessed": "2025-05-26T01:57:45.349315",
+    "modified": "2025-05-26T12:38:28.281629",
+    "type": "directory",
+    "children": {
+      "home": {
+        "created": "2025-05-26T11:59:56.089092",
+        "accessed": "2025-05-26T11:59:56.089092",
+        "modified": "2025-05-26T11:59:56.089092",
+        "type": "directory",
+        "children": {}
+      },
+      "file.txt": {
+        "created": "2025-05-26T13:06:39.476693",
+        "accessed": "2025-05-26T13:06:39.476693",
+        "modified": "2025-05-26T13:06:39.476693",
+        "type": "file",
+        "size": 46,
+        "content": "dfsaESDFVSA\\zxcvdazxfdasSdsafdasdsfaAdsadasdas"
+      }
+    }
+  }
+}
